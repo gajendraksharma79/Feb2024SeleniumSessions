@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" verbose="3" parallel="tests" thread-count="3"  > <!-- Verbose define the log information on console from tes
+testng side. it's value can be min. 1 and max =10. More verbose level more the information will be displayed i
+in console. Normally we should pick 3 or 4
+ -->
+
+
+	<test name="Google Test">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="url" value="https://google.com"/>
+		<classes>
+			<class name="mytests.GoogleTest" />
+
+		</classes>
+	</test>
+	
+	<test name="Open Cart Test">
+	<parameter name="browser" value="firefox"/>
+	<parameter name="url" 
+		value="https://naveenautomationlabs.com/opencart/index.php?route=account/login"/>
+		<classes>
+			<class name="mytests.OpenCartLoginTest" />
+		</classes>
+	</test>
+
+	<test name="OrangeHRM Test">
+	<parameter name="browser" value="edge"/>
+	<parameter name="url" value="https://orangehrm.com/30-day-free-trial"/>
+		<classes>
+			<class name="mytests.OrangeHRMTest" />
+		</classes>
+	</test>
+	
+	
+</suite>
